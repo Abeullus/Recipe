@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        player = MediaPlayer.create(this, R.raw.musik);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -131,18 +132,18 @@ public class MainActivity extends AppCompatActivity
 
     public void stop(View v) {
         stopPlayer();
-    }
+   }
     private void stopPlayer() {
         if (player != null) {
             player.release();
             player = null;
             Toast.makeText(this, "MediaPlayer released", Toast.LENGTH_SHORT).show();
-        }
+       }
     }
     @Override
     protected void onStop() {
         super.onStop();
-        stopPlayer();
+       stopPlayer();
     }
 }
 
