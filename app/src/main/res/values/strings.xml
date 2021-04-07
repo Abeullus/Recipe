@@ -10,6 +10,12 @@
     <string name="text_main_screen">Wähle nun, ob du ein Rezept mit Zutaten aus deinem Kühlschrank erhalten möchtest oder ein beliebiges Rezept.</string>
     <string name="button_1">eigene Zutaten</string>
     <string name="button_2">zufälliges Rezept</string>
+    <string name="text_1">Musik</string>
+    <string name="text_2">Benachrichtigungen</string>
+    <string name="button_3">An</string>
+    <string name="button_4">Aus</string>
+    <string name="button_5">An</string>
+    <string name="button_6">Aus</string>
 
 
     <!-- Text für Rezepte -->
