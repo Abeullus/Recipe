@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.Fricipe_2.Recipes;
-
 public class EmptyFragment extends Fragment {
 
     public EmptyFragment() {
@@ -20,7 +18,7 @@ public class EmptyFragment extends Fragment {
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Generiert das Layout für das Fragment
-        final View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        final View view = inflater.inflate(R.layout.fragment_startscreen, container, false);
 
 
         Button fab = view.findViewById(R.id.button2);
