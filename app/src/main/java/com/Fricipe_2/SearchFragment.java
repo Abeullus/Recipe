@@ -26,7 +26,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
 
 
     Button buttonSearch;
-    CheckBox checkBox, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6, checkBox7, checkBox8, checkBox9, checkBox10, checkBox11, checkBox12;
+    CheckBox checkBox, checkBox2, checkBox3, checkBox4, checkBox5, checkBox6, checkBox7, checkBox8, checkBox9, checkBox10, checkBox11, checkBox12, checkBox13, checkBox14, checkBox15, checkBox16, checkBox17, checkBox18, checkBox19, checkBox20;
 
     ArrayList<String> listItems = new ArrayList<String>();
 
@@ -48,18 +48,26 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
 
         buttonSearch = view.findViewById(R.id.btn_Add_IngredientAdd);
-        checkBox = view.findViewById(R.id.radioButton15);
-        checkBox2 = view.findViewById(R.id.radioButton16);
-        checkBox3 = view.findViewById(R.id.radioButton17);
-        checkBox4 = view.findViewById(R.id.radioButton18);
-        checkBox5 = view.findViewById(R.id.radioButton19);
-        checkBox6 = view.findViewById(R.id.radioButton20);
-        checkBox7 = view.findViewById(R.id.radioButton21);
-        checkBox8 = view.findViewById(R.id.radioButton22);
-        checkBox9 = view.findViewById(R.id.radioButton23);
-        checkBox10 = view.findViewById(R.id.radioButton24);
-        checkBox11 = view.findViewById(R.id.radioButton25);
-        checkBox12 = view.findViewById(R.id.radioButton26);
+        checkBox = view.findViewById(R.id.radioButton1);
+        checkBox2 = view.findViewById(R.id.radioButton2);
+        checkBox3 = view.findViewById(R.id.radioButton3);
+        checkBox4 = view.findViewById(R.id.radioButton4);
+        checkBox5 = view.findViewById(R.id.radioButton5);
+        checkBox6 = view.findViewById(R.id.radioButton6);
+        checkBox7 = view.findViewById(R.id.radioButton7);
+        checkBox8 = view.findViewById(R.id.radioButton8);
+        checkBox9 = view.findViewById(R.id.radioButton9);
+        checkBox10 = view.findViewById(R.id.radioButton10);
+        checkBox11 = view.findViewById(R.id.radioButton11);
+        checkBox12 = view.findViewById(R.id.radioButton12);
+        checkBox13 = view.findViewById(R.id.radioButton13);
+        checkBox14 = view.findViewById(R.id.radioButton14);
+        checkBox15 = view.findViewById(R.id.radioButton15);
+        checkBox16 = view.findViewById(R.id.radioButton16);
+        checkBox17 = view.findViewById(R.id.radioButton17);
+        checkBox18 = view.findViewById(R.id.radioButton18);
+        checkBox19 = view.findViewById(R.id.radioButton19);
+        checkBox20 = view.findViewById(R.id.radioButton20);
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -150,6 +158,70 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
             }
         });
         checkBox12.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox13.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox14.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox15.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox16.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox17.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox18.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox19.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                listItems.add(checkBox12.getText().toString());
+                adapter.notifyDataSetChanged();
+                clickCounter++;
+            }
+        });
+        checkBox20.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 listItems.add(checkBox12.getText().toString());

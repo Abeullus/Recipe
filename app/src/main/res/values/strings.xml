@@ -56,15 +56,16 @@
     <string name="chicken">Hünchen</string>
 
     <!-- Gemüse -->
-    <string name="mushroom">Pile</string>
+    <string name="mushroom">Schwammerl</string>
     <string name="peppers">Paprika</string>
     <string name="curcum">Gurke</string>
+    <string name="tomato">Tomaten</string>
     <string name="corn">Mais</string>
     <string name="onion">Zwiebeln</string>
     <string name="avocado">Avocado</string>
     <string name="garliac">Knoblauch</string>
-    <string name="potato">Kartoffel</string>
-    <string name="carrot">Karotte</string>
+    <string name="potato">Kartoffeln</string>
+    <string name="carrot">Karotten</string>
 
     <!-- Beilage -->
     <string name="rice">Reis</string>
