@@ -11,4 +11,20 @@
     <string name="button_1">eigene Zutaten</string>
     <string name="button_2">zufälliges Rezept</string>
 
+
+    <!-- Text für Rezepte -->
+
+    <string name="recipe_name">Rezept Name</string>
+    <string name="author">Autor</string>
+    <string name="country">Herkunftsland</string>
+    <string name="ingredients">Zutaten</string>
+    <string name="description">Beschreibung</string>
+    <string name="how_to">Zubreitung</string>
+
+
+    <!-- Text Activity-recipe_list -->
+
+    <string name="author2">von: </string>
+    <string name="like">Likes: </string>
+
 </resources>
