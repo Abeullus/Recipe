@@ -45,7 +45,7 @@ public class IngredientsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         // Generiert das Layout für das Fragment
-        final View view = inflater.inflate(R.layout.fragment_ingriendientsfrag, container, false);
+        final View view = inflater.inflate(R.layout.fragment_nothingFound, container, false);
 
         Button random = view.findViewById(R.id.button3);
         random.setOnClickListener(new View.OnClickListener() {

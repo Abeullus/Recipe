@@ -163,13 +163,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="Ingredients"
+        android:fontFamily="@font/bold"
+        android:text="@string/ingredients2"
         android:textColor="@color/colorAccent_deepGreen"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -202,34 +203,39 @@
         app:layout_constraintStart_toEndOf="@+id/radioButton15"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/btn_Add_IngredientAdd"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:background="#4CAF50"
-        android:text="Next"
+        android:layout_marginBottom="68dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/next"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:layout_width="409dp"
         android:layout_height="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="264dp"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton17" />
+        app:layout_constraintTop_toBottomOf="@+id/radioButton21" />
 
     <View
         android:layout_width="409dp"
         android:layout_height="10dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="256dp"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioButton21" />
+        app:layout_constraintTop_toBottomOf="@+id/radioButton17" />
 
     <View
         android:layout_width="409dp"

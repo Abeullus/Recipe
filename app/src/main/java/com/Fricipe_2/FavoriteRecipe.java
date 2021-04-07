@@ -50,7 +50,7 @@ public class FavoriteRecipe extends Fragment {
         // Generiert das Layout für das Fragment
         final ArrayList<RecipeItem> bestList;
         DatabaseHelper databaseHelper = new DatabaseHelper(getContext(), "Recipes.db", null, 1);
-        final View view = inflater.inflate(R.layout.fragment_favourite, container, false);
+        final View view = inflater.inflate(R.layout.fragment_favorite, container, false);
         GridView bestGridView = view.findViewById(R.id.GridView_Best);
 
         bestList = databaseHelper.favoriteSelection();
