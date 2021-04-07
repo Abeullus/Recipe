@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/bold"
         android:text="@string/ingredients2"
         android:textColor="@color/colorAccent_deepGreen"
@@ -42,6 +42,7 @@
         android:textColor="@color/colorFont1"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/radioButton1"
+        app:layout_constraintStart_toStartOf="@+id/radioButton4"
         app:layout_constraintTop_toTopOf="@+id/radioButton1" />
 
 
@@ -68,6 +69,7 @@
         android:textColor="@color/colorFont1"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/radioButton3"
+        app:layout_constraintStart_toStartOf="@+id/radioButton6"
         app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
 
     <CheckBox
@@ -194,13 +196,12 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="64dp"
         android:fontFamily="@font/regular"
         android:text="@string/carrot"
         android:textColor="@color/colorFont1"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/radioButton15"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioButton16"
         app:layout_constraintTop_toBottomOf="@+id/radioButton12"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -224,12 +225,11 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="64dp"
         android:fontFamily="@font/regular"
         android:text="@string/pasta"
         android:textColor="@color/colorFont1"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioButton18"
         app:layout_constraintTop_toBottomOf="@+id/radioButton14" />
 
 
@@ -252,13 +252,12 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="64dp"
         android:fontFamily="@font/regular"
         android:text="@string/flour"
         android:textColor="@color/colorFont1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/radioButton17"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioButton20"
         app:layout_constraintTop_toBottomOf="@+id/radioButton16"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -275,8 +274,6 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton17" />
-
-
 
 
     <CheckBox
@@ -299,6 +296,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="128dp"
+        android:layout_marginBottom="65dp"
         android:background="@color/colorPrimary"
         android:text="@string/next"
         android:textColor="@color/white"
