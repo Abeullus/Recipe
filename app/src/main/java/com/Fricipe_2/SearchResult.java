@@ -1,12 +1,14 @@
 package com.Fricipe_2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.Fricipe_2.RecipeListActivity;
 
@@ -18,15 +20,16 @@ public class SearchResult extends AppCompatActivity {
     ArrayAdapter<String> adapter;
     ArrayList<Integer> savedReceiveMatches;
     ArrayList<Integer> savedRecipeList;
+    MediaPlayer player;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
-
+        player = MediaPlayer.create(this, R.raw.musik);
         Intent intent = getIntent();
-
+        play();
         final ArrayList<Integer> reciveRecipeList = intent.getIntegerArrayListExtra("idrecipes");
         final ArrayList<Integer> receiveMatches = intent.getIntegerArrayListExtra("matches");
         this.savedReceiveMatches = receiveMatches;
@@ -62,6 +65,22 @@ public class SearchResult extends AppCompatActivity {
             }
         });
     }
+
+    public void play() {
+        if (player == null) {
+            player = MediaPlayer.create(this, R.raw.musik);
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+
+                }
+            });
+        }
+        player.start();
+    }
+
+
 
 
     public ArrayList<String> createString(ArrayList<Integer> array) {
