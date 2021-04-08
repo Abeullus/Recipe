@@ -3,7 +3,7 @@ Fricipe-App
 Der Hintergrud wieso wir diese App entwickelt haben war unsere Unentschlossenheit in unserer Wg. Meine Mibewohner waren oft unentschlossen was wir kochen 
 und unser Kühlschrank war oft leer oder es waren abgelaufene Lebensmittel zu finden da wir vergessen wurde gewisse Lebensmittel zu nutzen.
 Unsere Ziele mit dieser App sind anregungen zu schaffen, um selber und einfach zu kochen. Außerdem kann man Lebensmittel die im Kühlschrank sonst untergehen würden nutzen um leckere Rezepte zu kochen.
-Des weieren sind Zeitersparnis und Nachhltigkeit die Hauptziele dieses App. Hier sehen Sie einige Auszüge wie die App aufgebaut ist.
+Des weieren sind Zeitersparnis und Nachhaltigkeit die Hauptziele dieses App. Hier sehen Sie einige Auszüge wie die App aufgebaut ist.
 
 
 ___________________________________________________
@@ -58,7 +58,7 @@ Fabian Ziegler
 Matr.Nr: 2082578
 Email:Fabian.Ziegler@stud.uni-regensburg.de
 GitHub:
-Komponente: Benachrichtigung, Layout
+Komponente: Layout
 
 Die gesamte App wurde zusammen programmmiert bis auf wenige Komponenten die oben angegeben wurden.
 
