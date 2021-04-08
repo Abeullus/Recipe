@@ -69,3 +69,17 @@ Die gesamte App wurde zusammen programmmiert bis auf wenige Komponenten die oben
 Hier hat der Nutzer die Wahl, ein zufälliges Rezept zu wählen, oder seine vorhandenen Zutaten im nächsten Schritt zu wählen.
 
 
+![Screenshot_2](screenshots/Screenshot_2.png)
+
+So sieht das ausgeklappte Burger-Menü aus.
+
+
+![Screenshot_2](screenshots/Screenshot_3.png)
+
+Hier kann der Nutzer seine Zutaten auswählen. Dieser Bildschirm erscheint, sobald der Nutzer auf "eigene Zutaten" in Screenshot 1 tippt.
+
+
+Link zum Video: 
+https://www.dropbox.com/sh/5hqyjixatqrwsb7/AAAhyk_WfYWjJtJnA6GqlQVpa?dl=0 
+
+
