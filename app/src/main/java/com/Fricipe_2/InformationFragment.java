@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class PushNotification extends Fragment {
+public class InformationFragment extends Fragment {
 
 
-    public PushNotification() {
+    public InformationFragment() {
 
     }
 

@@ -56,8 +56,8 @@ public class Recipes extends Fragment {
 
             int eiernudelnId = databaseHelper.GetIdByRecipeName("eiernudeln");
             ArrayList<String> eiernudelnIngre = new ArrayList<>();
-            eiernudelnIngre.add("Nudeln");
-            eiernudelnIngre.add("Eier");
+            eiernudelnIngre.add("Pasta");
+            eiernudelnIngre.add("egg");
             eiernudelnIngre.add("Mehl");
             eiernudelnIngre.add("gochujang");
             eiernudelnIngre.add("carrot");

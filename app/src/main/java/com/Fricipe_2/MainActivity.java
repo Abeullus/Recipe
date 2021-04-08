@@ -1,9 +1,10 @@
 package com.Fricipe_2;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,12 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.media.MediaPlayer;
-import android.widget.CompoundButton;
-import android.widget.Switch;
 import android.widget.Toast;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 
-import com.Fricipe_2.FavoriteRecipe;
-import com.Fricipe_2.Recipes;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,6 +24,7 @@ public class MainActivity extends AppCompatActivity
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity
                 invalidateOptionsMenu();
             }
         };
+
 
         drawer.addDrawerListener(toggle);
 
@@ -98,9 +99,13 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_category)
         {
-            //connect to category page
             CategoryFragment categoryFragment = new CategoryFragment();
             manager.beginTransaction().replace(R.id.root_layout, categoryFragment, categoryFragment.getTag()).addToBackStack(null).commit();
+
+        } else if (id == R.id.nav_information)
+        {
+            InformationFragment informationFragment = new InformationFragment();
+            manager.beginTransaction().replace(R.id.root_layout, informationFragment, informationFragment.getTag()).addToBackStack(null).commit();
 
         }
 
@@ -145,6 +150,8 @@ public class MainActivity extends AppCompatActivity
         super.onStop();
        stopPlayer();
     }
+
+
 }
 
 

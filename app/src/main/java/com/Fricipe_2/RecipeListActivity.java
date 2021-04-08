@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class RecipeListActivity extends AppCompatActivity {
 
     ArrayList<RecipeItem> recipes = new ArrayList<>();
-    //Connect with screen elements
+
     TextView txtTitle;
     ListView listView;
 
@@ -25,7 +25,6 @@ public class RecipeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_list);
 
-        //Show backbutton
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
@@ -37,26 +36,24 @@ public class RecipeListActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();  // Always call the superclass method first
         recipes.clear();
-        //Connect with screen elements
+
         txtTitle = findViewById(R.id.txt_recipeListTitle);
         listView = findViewById(R.id.listview_recipelist);
 
-        //Connect with databeas
+
         DatabaseHelper databaseHelper = new DatabaseHelper(this, "Recipes.db", null, 1);
 
         String title = "";
 
-        //Get the category or matching information from previous page
+
         Intent intent = getIntent();
         if (intent.hasExtra("category")) {
             title = intent.getStringExtra("category");
-            //set product list title from intent key "category"
             txtTitle.setText(title);
 
             recipes = databaseHelper.recipesSelectByCategory(title);
         } else if (intent.hasExtra("title")) {
             title = intent.getStringExtra("title");
-            //set product list title from intent key "category"
             txtTitle.setText(title);
             ArrayList<Integer> reciveRecipeList = intent.getIntegerArrayListExtra("list");
             for (int i = 0; i < reciveRecipeList.size(); i++) {
@@ -65,7 +62,7 @@ public class RecipeListActivity extends AppCompatActivity {
             }
         }
 
-        //set ListView with Data
+
         listView.setAdapter(new RecipeListAdapter(this, recipes, R.layout.activity_recipe_list_item));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
@@ -74,7 +71,6 @@ public class RecipeListActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), RecipeActivity.class);
                 intent.putExtra("Fricipe_2", selectRecipe.get_recipeName());
                 startActivity(intent);
-                //Toast.makeText(view.getContext(),selectRecipe.get_recipName(),Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -84,7 +80,7 @@ public class RecipeListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(android.view.MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                // NavUtils.navigateUpFromSameTask(this);
+
                 finish();
                 return true;
         }

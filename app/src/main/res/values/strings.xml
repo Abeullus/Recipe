@@ -55,31 +55,7 @@
 
     <string name="ingredients2">Zutaten: </string>
 
-    <!-- Fleisch -->
-    <string name="beef">Rind</string>
-    <string name="pork">Schwein</string>
-    <string name="fish">Fisch</string>
-    <string name="chicken">Hünchen</string>
 
-    <!-- Gemüse -->
-    <string name="mushroom">Schwammerl</string>
-    <string name="peppers">Paprika</string>
-    <string name="curcum">Gurke</string>
-    <string name="tomato">Tomaten</string>
-    <string name="corn">Mais</string>
-    <string name="onion">Zwiebeln</string>
-    <string name="avocado">Avocado</string>
-    <string name="garliac">Knoblauch</string>
-    <string name="potato">Kartoffeln</string>
-    <string name="carrot">Karotten</string>
-
-    <!-- Beilage -->
-    <string name="rice">Reis</string>
-    <string name="pasta">Nudeln</string>
-
-    <!-- weiteres -->
-    <string name="egg">Eier</string>
-    <string name="flour">Mehl</string>
-    <string name="sugar">Zucker</string>
-    <string name="milk">Milch</string>
+    <!-- Text Suchergebniss -->
+    <string name="result">Ergebnisse:</string>
 </resources>

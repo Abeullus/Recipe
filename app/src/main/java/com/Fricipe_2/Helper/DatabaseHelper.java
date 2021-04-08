@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Hier wird die Datenbank für die Rezepte erstellt.
 
         db.execSQL("CREATE TABLE RECIPES( _id INTEGER PRIMARY KEY AUTOINCREMENT, category TEXT,"
-                + "recipeName TEXT, author TEXT, uploardDate TEXT, howTo TEXT, description TEXT,"
+                + "recipeName TEXT, author TEXT, uploadDate TEXT, howTo TEXT, description TEXT,"
                 + "thumbnail BLOB, mainImg BLOB, likeCount INTEGER);");
 
         db.execSQL("CREATE TABLE INGREDIENTS( _id INTEGER PRIMARY KEY AUTOINCREMENT, recipeID INTEGER, ingreName TEXT);");

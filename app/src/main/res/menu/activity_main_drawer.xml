@@ -16,6 +16,10 @@
             android:id="@+id/favoriteRecipe"
             android:icon="@drawable/checkbox"
             android:title="Lieblingsrezepte" />
+        <item
+            android:id="@+id/nav_information"
+            android:icon="@drawable/checkbox"
+            android:title="Information" />
 
     </group>
 
