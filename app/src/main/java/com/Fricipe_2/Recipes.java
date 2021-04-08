@@ -48,31 +48,31 @@ public class Recipes extends Fragment {
         ArrayList<RecipeItem> defaultDataList = databaseHelper.allRecipes();
         if (defaultDataList == null || defaultDataList.size() == 0) {
             Drawable drawable = getResources().getDrawable(R.drawable.bibimbap, getActivity().getTheme());
-            byte[] bibimbap = pictureHelper.getByteArrayFromDrawable(drawable);
+            byte[] eiernudeln = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Korea", "Bibimbap", "shyjoo", today.toString(),
-                    "1. rice \n 2. hubs and egg \n 3. minx", "Korean traditional food",
-                    bibimbap, bibimbap, 0);
+            databaseHelper.insertRecipe("Deutsch", "Eiernudeln", "thomas", today.toString(),
+                    "1. Nudeln \n 2.Eier \n 3. Mehl", "traditionelles deutsches Essen",
+                    eiernudeln, eiernudeln, 0);
 
-            int bibmbapId = databaseHelper.GetIdByRecipeName("Bibimbap");
-            ArrayList<String> bibmbapIngre = new ArrayList<>();
-            bibmbapIngre.add("rice");
-            bibmbapIngre.add("egg");
-            bibmbapIngre.add("sesame oil");
-            bibmbapIngre.add("gochujang");
-            bibmbapIngre.add("carrot");
+            int eiernudelnId = databaseHelper.GetIdByRecipeName("eiernudeln");
+            ArrayList<String> eiernudelnIngre = new ArrayList<>();
+            eiernudelnIngre.add("Nudeln");
+            eiernudelnIngre.add("Eier");
+            eiernudelnIngre.add("Mehl");
+            eiernudelnIngre.add("gochujang");
+            eiernudelnIngre.add("carrot");
 
-            for (int i = 0; i < bibmbapIngre.size(); i++) {
-                databaseHelper.insertIngredients(bibmbapId, bibmbapIngre.get(i));
+            for (int i = 0; i < eiernudelnIngre.size(); i++) {
+                databaseHelper.insertIngredients(eiernudelnId, eiernudelnIngre.get(i));
             }
 
             //Rezepte wurden manuel eingepflegt und könnten bei Bedarf mit einer API erweitert werden.
 
             //Rezept 1
             drawable = getResources().getDrawable(R.drawable.bulgogi, getActivity().getTheme());
-            byte[] bulgogi = pictureHelper.getByteArrayFromDrawable(drawable);
+            byte[] Lachsnudeln = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Korea", "Bulgogi", "shyjoo", today.toString(),
+            databaseHelper.insertRecipe("Italienisch", "Lachsnudeln", "Fabian", today.toString(),
                     "1. Thinly slice 1 pound of sirloin or tenderloin beef against the grain.\n" +
                             "2. Mix these ingredients to make a marinade:\n" +
                             "\t 2 tbs of soy sauce\n" +
@@ -88,19 +88,19 @@ public class Recipes extends Fragment {
                             "4. Cook it on a pan or a grill, and transfer to a plate or a cast iron plate to serve.\n" +
                             "5. Sprinkle chopped green onion and toasted sesame seeds over top.\n" +
                             "6. Wrap a piece of bulgogi in a lettuce left with a little bit of ssamjang, and put it in your mouth. You can dip carrot or cucumber strips into the ssamjang.", "Korean traditional food",
-                    bulgogi, bulgogi, 4);
+                    Lachsnudeln, Lachsnudeln, 4);
 
-            int bulgogiId = databaseHelper.GetIdByRecipeName("Bulgogi");
-            ArrayList<String> bulgogiIngre = new ArrayList<>();
-            bulgogiIngre.add("soy sauce");
-            bulgogiIngre.add("brown sugar");
-            bulgogiIngre.add("sesame oil");
-            bulgogiIngre.add("gochujang");
-            bulgogiIngre.add("green onion");
-            bulgogiIngre.add("onion");
+            int LachsnudelnId = databaseHelper.GetIdByRecipeName("Bulgogi");
+            ArrayList<String> LachsnudelnIngre = new ArrayList<>();
+            LachsnudelnIngre.add("Fisch");
+            LachsnudelnIngre.add("Zwiebeln");
+            LachsnudelnIngre.add("Nudeln");
+            LachsnudelnIngre.add("Milch");
+            LachsnudelnIngre.add("Knoblauch");
+            LachsnudelnIngre.add("onion");
 
-            for (int i = 0; i < bulgogiIngre.size(); i++) {
-                databaseHelper.insertIngredients(bulgogiId, bulgogiIngre.get(i));
+            for (int i = 0; i < LachsnudelnIngre.size(); i++) {
+                databaseHelper.insertIngredients(LachsnudelnId, LachsnudelnIngre.get(i));
             }
 
 
