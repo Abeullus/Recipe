@@ -59,8 +59,7 @@ public class Recipes extends Fragment {
             eiernudelnIngre.add("Pasta");
             eiernudelnIngre.add("egg");
             eiernudelnIngre.add("Mehl");
-            eiernudelnIngre.add("gochujang");
-            eiernudelnIngre.add("carrot");
+
 
             for (int i = 0; i < eiernudelnIngre.size(); i++) {
                 databaseHelper.insertIngredients(eiernudelnId, eiernudelnIngre.get(i));
@@ -73,21 +72,13 @@ public class Recipes extends Fragment {
             byte[] Lachsnudeln = pictureHelper.getByteArrayFromDrawable(drawable);
 
             databaseHelper.insertRecipe("Italienisch", "Lachsnudeln", "Fabian", today.toString(),
-                    "1. Thinly slice 1 pound of sirloin or tenderloin beef against the grain.\n" +
-                            "2. Mix these ingredients to make a marinade:\n" +
-                            "\t 2 tbs of soy sauce\n" +
-                            "\t 3 tbs of water\n" +
-                            "\t 1 tbs of brown sugar\n" +
-                            "\t 1 tbs of honey\n" +
-                            "\t 1 tbs of sesame oil\n" +
-                            "\t 1 tbs of toasted sesame seeds\n" +
-                            "\t 2 chopped green onions\n" +
-                            "\t 4 cloves of minced garlic\n" +
-                            "\t ½ ts of black pepper.\n" +
-                            "3. Add the beef to the marinade and keep in the fridge at least 30 minutes. If your cut of beef is tough, you can marinate longer to soften it, or use a Korean pear in the marinade, like I do in this Fricipe_2.\n" +
-                            "4. Cook it on a pan or a grill, and transfer to a plate or a cast iron plate to serve.\n" +
-                            "5. Sprinkle chopped green onion and toasted sesame seeds over top.\n" +
-                            "6. Wrap a piece of bulgogi in a lettuce left with a little bit of ssamjang, and put it in your mouth. You can dip carrot or cucumber strips into the ssamjang.", "Korean traditional food",
+                    "1. Die Ziebeln und den Knoblauch in kleine Stücke schneiden und in einer Pfanne anbraten.\n" +
+                            "2. Den Lachs in die Pfanne dazugeben und scharf anbraten:\n" +
+                            "3.Wasser aufsetzen und salzen.\n" +
+                            "4. Nachdem das Wasser kocht Nudeln hinzufügen und 10 Minuten kochen lassen.\n" +
+                            "5. Nudeln in die Pfanne dazugeben und gut durchmengen.\n" +
+                            "6. Milch dazugeben und aufkochen lassen.\n"+
+                            "7. Mit Pfeffer und Salz abschmecken", "Studentenessen",
                     Lachsnudeln, Lachsnudeln, 4);
 
             int LachsnudelnId = databaseHelper.GetIdByRecipeName("Bulgogi");
@@ -97,7 +88,7 @@ public class Recipes extends Fragment {
             LachsnudelnIngre.add("Nudeln");
             LachsnudelnIngre.add("Milch");
             LachsnudelnIngre.add("Knoblauch");
-            LachsnudelnIngre.add("onion");
+
 
             for (int i = 0; i < LachsnudelnIngre.size(); i++) {
                 databaseHelper.insertIngredients(LachsnudelnId, LachsnudelnIngre.get(i));
@@ -108,24 +99,26 @@ public class Recipes extends Fragment {
             drawable = getResources().getDrawable(R.drawable.bolognese, getActivity().getTheme());
             byte[] bolognese = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Itay", "Bolognese", "shyjoo", today.toString(),
-                    "1. Put the onion and oil in a large pan and fry over a fairly high heat for 3-4 mins. Add the garlic and mince and fry until they both brown. Add the mushrooms and herbs, and cook for another couple of mins.\n" +
-                            "2. Stir in the tomatoes, beef stock, tomato ketchup or purée, Worcestershire sauce and seasoning. Bring to the boil, then reduce the heat, cover and simmer, stirring occasionally, for 30 mins.\n" +
-                            "3. Meanwhile, cook the spaghetti in a large pan of boiling, salted water, according to packet instructions. Drain well, run hot water through it, put it back in the pan and add a dash of olive oil, if you like, then stir in the meat sauce. Serve in hot bowls and hand round Parmesan cheese, for sprinkling on top.",
-                    "Make our traditional spaghetti Bolognese Fricipe_2 with homemade Bolognese sauce and tender chunks of beef, making this dish a family favourite.",
+            databaseHelper.insertRecipe("Italienisch", "Bolognese", "thomas", today.toString(),
+                    "1.Zwiebeln und Knoblauch kleinschneiden und in der Pfanne anbraten.\n" +
+                            "2. Wasser aufsetzen und Nudeln 10 Minuten Kochen lassen.\n" +
+                            "3. Tomaten kleinschneiden und pyrieren.\n" +
+                            "4. Das Hackfleisch scharf anbraten und Tomaten dazugeben." +
+                            "5. Etwas Milch dazugeben und gut umrühren.\n" +
+                            "5. Nudeln abseihen und servieren.\n",
+                    "klassisches italienisches Rezept.",
                     bolognese, bolognese, 6);
 
             int bologneseId = databaseHelper.GetIdByRecipeName("Bolognese");
             ArrayList<String> bologneseIngre = new ArrayList<>();
-            bologneseIngre.add("onion");
-            bologneseIngre.add("olive oil");
-            bologneseIngre.add("spaghetti");
-            bologneseIngre.add("Parmesan");
-            bologneseIngre.add("mushroom");
-            bologneseIngre.add("oregano");
-            bologneseIngre.add("tomatoes");
-            bologneseIngre.add("beef stock");
-            bologneseIngre.add("beef");
+            bologneseIngre.add("Zwiebeln");
+            bologneseIngre.add("Nudeln");
+            bologneseIngre.add("Rind");
+            bologneseIngre.add("Schwein");
+            bologneseIngre.add("Tomaten");
+            bologneseIngre.add("Knoblauch");
+            bologneseIngre.add("Milch");
+            ;
 
             for (int i = 0; i < bologneseIngre.size(); i++) {
                 databaseHelper.insertIngredients(bologneseId, bologneseIngre.get(i));
@@ -134,75 +127,98 @@ public class Recipes extends Fragment {
 
             //Rezept 3
             drawable = getResources().getDrawable(R.drawable.chickencacciatore, getActivity().getTheme());
-            byte[] chickencacciatore = pictureHelper.getByteArrayFromDrawable(drawable);
+            byte[] HühnchnNudeln = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Itay", "Chicken Cacciatore ", "shyjoo", today.toString(),
-                    "1. Combine the flour, salt and pepper in a plastic bag. Shake the chicken pieces in flour until coated. Heat the oil in a large skillet (one that has a cover/lid). Fry the chicken pieces until they are browned on both sides. Remove from skillet.\n" +
-                            "2. Add the onion, garlic and bell pepper to the skillet and saute until the onion is slightly browned. Return the chicken to the skillet and add the tomatoes, oregano and wine. Cover and simmer for 30 minutes over medium low heat.\n" +
-                            "3. Add the mushrooms and salt and pepper to taste. Simmer for 10 more minutes.",
-                    "Many food names reflect various occupations or trades.",
-                    chickencacciatore, chickencacciatore, 2);
+            databaseHelper.insertRecipe("Italienisch", "HühnchnNudeln ", "fabian", today.toString(),
+                    "1.Zwiebeln kleinschneiden und in der Pfanne anbraten.\n" +
+                            "2. Wasser aufsetzen und Nudeln 10 Minuten Kochen lassen.\n" +
+                            "4. Hühnchen anbraten und würzen." +
+                            "5. Tomaten kleinschneiden und pyrieren.\n" +
+                            "6. Paprika kleinschneiden und anbraten." +
+                            "7. Schwammerl kleinschneiden und anbraten." +
+                            "8. Etwas Milch dazugeben und gut umrühren.\n" +
+                            "9. Nudeln abseihen und servieren.\n",
+                    "klassisches italienisches Rezept.",
+                    HühnchnNudeln, HühnchnNudeln, 2);
 
-            int chickencacciatoreId = databaseHelper.GetIdByRecipeName("Chicken Cacciatore ");
-            ArrayList<String> chickencacciatoreIngre = new ArrayList<>();
-            chickencacciatoreIngre.add("flour");
-            chickencacciatoreIngre.add("salt");
-            chickencacciatoreIngre.add("black pepper");
-            chickencacciatoreIngre.add("chicken");
-            chickencacciatoreIngre.add("vegetable oil");
-            chickencacciatoreIngre.add("onion");
-            chickencacciatoreIngre.add("tomatoes");
-            chickencacciatoreIngre.add("oregano");
-            chickencacciatoreIngre.add("wine");
+            int HühnchnNudelnId = databaseHelper.GetIdByRecipeName("HühnchenNudeln ");
+            ArrayList<String> HühnchnNudelnIngre = new ArrayList<>();
+            HühnchnNudelnIngre.add("Hühnchen");
+            HühnchnNudelnIngre.add("Schwammerl");
+            HühnchnNudelnIngre.add("Nudeln");
+            HühnchnNudelnIngre.add("Milch");
+            HühnchnNudelnIngre.add("Paprika");
+            HühnchnNudelnIngre.add("Tomaten");
+            HühnchnNudelnIngre.add("Zwiebeln");
+            ;
 
-            for (int i = 0; i < chickencacciatoreIngre.size(); i++) {
-                databaseHelper.insertIngredients(chickencacciatoreId, chickencacciatoreIngre.get(i));
+            for (int i = 0; i < HühnchnNudelnIngre.size(); i++) {
+                databaseHelper.insertIngredients(HühnchnNudelnId, HühnchnNudelnIngre.get(i));
             }
 
 
             //Rezept 4
             drawable = getResources().getDrawable(R.drawable.abzhorka, getActivity().getTheme());
-            byte[] abzhorka = pictureHelper.getByteArrayFromDrawable(drawable);
+            byte[] chili = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Russia", "Abzhorka", "shyjoo", today.toString(),
-                    "1. Put the onion and oil in a large pan and fry over a fairly high heat for 3-4 mins. Add the garlic and mince and fry until they both brown. Add the mushrooms and herbs, and cook for another couple of mins.\n" +
-                            "2. Stir in the tomatoes, beef stock, tomato ketchup or purée, Worcestershire sauce and seasoning. Bring to the boil, then reduce the heat, cover and simmer, stirring occasionally, for 30 mins.\n" +
-                            "3. Meanwhile, cook the spaghetti in a large pan of boiling, salted water, according to packet instructions. Drain well, run hot water through it, put it back in the pan and add a dash of olive oil, if you like, then stir in the meat sauce. Serve in hot bowls and hand round Parmesan cheese, for sprinkling on top.",
-                    "Make our traditional spaghetti Bolognese Fricipe_2 with homemade Bolognese sauce and tender chunks of beef, making this dish a family favourite.",
-                    abzhorka, abzhorka, 3);
+            databaseHelper.insertRecipe("Mexikaisch", "ChiliConCarne", "thomas", today.toString(),
+                    "1. Knobluauch und Zwiebeln in kleine Stücke schneiden und gut anbraten.\n" +
+                            "1. Wasser aufsetzen und Kartoffeln kochen.\n" +
+                            "1.Fleisch nach wahl anbraten.\n" +
+                            "1. Paprika und Tomaten klein würfeln und in die Pfanne dazugeben.\n" +
+                            "1. Mais dazugeben und gut ene Stune köcheln lassen.\n" +
+                            "1. Kartoffeln abseien und klein herschneiden und auch in die Pfanne dazugeben.\n" +
+                            "1. Alles gut mit Salz und Pfeffer würzen.\n" ,
 
-            int abzhorkaId = databaseHelper.GetIdByRecipeName("Abzhorka");
-            ArrayList<String> abzhorkaIngre = new ArrayList<>();
-            abzhorkaIngre.add("carrot");
-            abzhorkaIngre.add("pickle");
-            abzhorkaIngre.add("onion");
-            abzhorkaIngre.add("beef");
+                    "auch am darauffolgnden Tag sehr lecker.",
+                    chili, chili, 3);
 
-            for (int i = 0; i < abzhorkaIngre.size(); i++) {
-                databaseHelper.insertIngredients(abzhorkaId, abzhorkaIngre.get(i));
+            int chiliId = databaseHelper.GetIdByRecipeName("ChiliConCarne");
+            ArrayList<String> chiliIngre = new ArrayList<>();
+            chiliIngre.add("Rind");
+            chiliIngre.add("Schwein");
+            chiliIngre.add("Paprika");
+            chiliIngre.add("Mais");
+            chiliIngre.add("Tomate");
+            chiliIngre.add("Kartoffeln");
+            chiliIngre.add("Milch");
+            chiliIngre.add("Knoblauch");
+
+            for (int i = 0; i < chiliIngre.size(); i++) {
+                databaseHelper.insertIngredients(chiliId, chiliIngre.get(i));
             }
 
 
             //Rezept 5
             drawable = getResources().getDrawable(R.drawable.beefstroganoff, getActivity().getTheme());
-            byte[] beefstroganoff = pictureHelper.getByteArrayFromDrawable(drawable);
+            byte[] Wokpfanne = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Russia", "Beef Stroganoff", "shyjoo", today.toString(),
-                    "Chop the meat long wise fibers (fibres) and beat the pieces a little. After that cut the pieces into stripes 2 cm long and 1/2 cm wide. Season and roll them in flour. Fry chopped onion in the pan and when it is gold brown, put the stripes there. Fry on hot heat until the meat is light brown. Make a sauce: fry 1 tb flour pounded with butter for few minutes, add sour cream, ketchup, salt. Pour the sauce over meat and stew on a low heat during 15-20 minutes. Don't let sauce to boil, overwise the meat will be hard. Beef Stroganoff is served with fried potatoes.\n",
-                    "Beef stroganoff is a dish consisting of strips of lean beef sauteed and served in a sour-cream sauce with onions and mushrooms. Legend has it that when he was stationed in deepest Siberia, his chef discovered that the beef was frozen so solid that it could only be coped with by cutting it into very thin strips.",
-                    beefstroganoff, beefstroganoff, 8);
+            databaseHelper.insertRecipe("Chinesisch", "Wokpfanne", "shyjoo", today.toString(),
+                    "1. .\n" +
+                            "1. .\n" +
+                            "1. .\n" +
+                            "1. .\n" +
+                            "1. .\n" +
+                            "1. .\n" +
+                            "1. .\n" +" " +
+                            ".\n",
+                    "Bhe was stationed in deepest Siberia, his chef discovered that the beef was frozen so solid that it could only be coped with by cutting it into very thin strips.",
+                    Wokpfanne, Wokpfanne, 8);
 
-            int beefstroganoffId = databaseHelper.GetIdByRecipeName("Beef Stroganoff");
-            ArrayList<String> beefstroganoffIngre = new ArrayList<>();
-            beefstroganoffIngre.add("beef");
-            beefstroganoffIngre.add("flour");
-            beefstroganoffIngre.add("ketchup");
-            beefstroganoffIngre.add("sour cream");
-            beefstroganoffIngre.add("broth");
-            beefstroganoffIngre.add("onion");
+            int WokpfanneId = databaseHelper.GetIdByRecipeName("Beef Stroganoff");
+            ArrayList<String> WokpfanneIngre = new ArrayList<>();
+            WokpfanneIngre.add("Hühnchen");
+            WokpfanneIngre.add("Paprika");
+            WokpfanneIngre.add("Schwammerl");
+            WokpfanneIngre.add("Zwiebeln");
+            WokpfanneIngre.add("Mais");
+            WokpfanneIngre.add("Karotten");
+            WokpfanneIngre.add("Karotten");
+            WokpfanneIngre.add("Karotten");
+            WokpfanneIngre.add("Karotten");
 
-            for (int i = 0; i < beefstroganoffIngre.size(); i++) {
-                databaseHelper.insertIngredients(beefstroganoffId, beefstroganoffIngre.get(i));
+            for (int i = 0; i <WokpfanneIngre.size(); i++) {
+                databaseHelper.insertIngredients(WokpfanneId, WokpfanneIngre.get(i));
             }
         }
 
