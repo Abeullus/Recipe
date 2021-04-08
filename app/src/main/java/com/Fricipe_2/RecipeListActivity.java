@@ -38,8 +38,8 @@ public class RecipeListActivity extends AppCompatActivity {
         super.onStart();  // Always call the superclass method first
         recipes.clear();
 
-        txtTitle = findViewById(R.id.txt_recipeListTitle);
-        listView = findViewById(R.id.listview_recipelist);
+        txtTitle = (TextView) findViewById(R.id.txt_recipeListTitle);
+        listView = (ListView) findViewById(R.id.listview_recipelist);
 
 
         DatabaseHelper databaseHelper = new DatabaseHelper(this, "Recipes.db", null, 1);

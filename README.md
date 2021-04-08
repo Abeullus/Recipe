@@ -32,8 +32,16 @@ Musik:
 
 https://www.youtube.com/watch?v=rJ3XbXtjNaE
 https://www.youtube.com/watch?v=C_Ka7cKwXW0
+verwendete Musik: https://freemusicarchive.org/genre/Jazz?sort=date&d=0&pageSize=20&page=2
 
+Bilder: 
 
+Lachsnudeln: https://unsplash.com/photos/aXZDr6Or8H0
+Eiernudeln: https://www.gutekueche.at/eiernudeln-rezept-5052
+Bolognese: https://unsplash.com/photos/qits91IZv1o
+Hühnchennudeln: https://www.springlane.de/magazin/rezeptideen/fusilli-pfanne-haehnchen-spinat/?utm_source=pinterest&utm_medium=social&utm_campaign=post&epik=dj0yJnU9eFh1dkdNaDVoa2pyYmljWXdmZ2t4OEh2MDRudzFUSGomcD0wJm49NDM3bm1fUGw1aktFWjdXQ2l5d0xZQSZ0PUFBQUFBR0J2VGRV
+Wokpfanne: https://www.bofrost.de/shop/themenwelten/taste-of-india/gemuese-haehnchenpfanne-indian-curry.html?ga&track-s=ggla&track-c=SEA&track-p=15&adword=ggla/ShoppingGeneric_AlleKategorien_EverythingElse&gclid=CjwKCAjw07qDBhBxEiwA6pPbHl11Jzf68UaMD03f7jRVdiADHPZT0ShVvt-RkC8pdbMJz5h_oCRCbhoCaDMQAvD_BwE
+ChilliConCarne: https://www.pexels.com/de-de/foto/lebensmittel-person-loffel-abendessen-5907619/
 ___________________________________________________
 
 
@@ -53,3 +61,6 @@ GitHub:
 Komponente: Benachrichtigung, Layout
 
 Die gesamte App wurde zusammen programmmiert bis auf wenige Komponenten die oben angegeben wurden.
+
+
+

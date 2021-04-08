@@ -48,7 +48,7 @@ public class Recipes extends Fragment {
 
         ArrayList<RecipeItem> defaultDataList = databaseHelper.allRecipes();
         if (defaultDataList == null || defaultDataList.size() == 0) {
-            Drawable drawable = getResources().getDrawable(R.drawable.bibimbap, getActivity().getTheme());
+            Drawable drawable = getResources().getDrawable(R.drawable.eiernudeln, getActivity().getTheme());
             byte[] eiernudeln = pictureHelper.getByteArrayFromDrawable(drawable);
 
             databaseHelper.insertRecipe("Deutsch", "Eiernudeln", "thomas", today.toString(),
@@ -68,7 +68,7 @@ public class Recipes extends Fragment {
 
 
             //Rezept 1
-            drawable = getResources().getDrawable(R.drawable.bulgogi, getActivity().getTheme());
+            drawable = getResources().getDrawable(R.drawable.lachsnudeln, getActivity().getTheme());
             byte[] Lachsnudeln = pictureHelper.getByteArrayFromDrawable(drawable);
 
             databaseHelper.insertRecipe("Italienisch", "Lachsnudeln", "Fabian", today.toString(),
@@ -81,17 +81,17 @@ public class Recipes extends Fragment {
                             "7. Mit Pfeffer und Salz abschmecken", "Studentenessen",
                     Lachsnudeln, Lachsnudeln, 4);
 
-            int LachsnudelnId = databaseHelper.GetIdByRecipeName("Bulgogi");
-            ArrayList<String> LachsnudelnIngre = new ArrayList<>();
-            LachsnudelnIngre.add("Fisch");
-            LachsnudelnIngre.add("Zwiebeln");
-            LachsnudelnIngre.add("Nudeln");
-            LachsnudelnIngre.add("Milch");
-            LachsnudelnIngre.add("Knoblauch");
+            int LachsnudelnId = databaseHelper.GetIdByRecipeName("Lachsnudeln");
+            ArrayList<String> lachsnudelnIngre = new ArrayList<>();
+            lachsnudelnIngre.add("Fisch");
+            lachsnudelnIngre.add("Zwiebeln");
+            lachsnudelnIngre.add("Nudeln");
+            lachsnudelnIngre.add("Milch");
+            lachsnudelnIngre.add("Knoblauch");
 
 
-            for (int i = 0; i < LachsnudelnIngre.size(); i++) {
-                databaseHelper.insertIngredients(LachsnudelnId, LachsnudelnIngre.get(i));
+            for (int i = 0; i < lachsnudelnIngre.size(); i++) {
+                databaseHelper.insertIngredients(LachsnudelnId, lachsnudelnIngre.get(i));
             }
 
 
@@ -103,7 +103,7 @@ public class Recipes extends Fragment {
                     "1.Zwiebeln und Knoblauch kleinschneiden und in der Pfanne anbraten.\n" +
                             "2. Wasser aufsetzen und Nudeln 10 Minuten Kochen lassen.\n" +
                             "3. Tomaten kleinschneiden und pyrieren.\n" +
-                            "4. Das Hackfleisch scharf anbraten und Tomaten dazugeben." +
+                            "4. Das Hackfleisch scharf anbraten und Tomaten dazugeben. \n" +
                             "5. Etwas Milch dazugeben und gut umrühren.\n" +
                             "5. Nudeln abseihen und servieren.\n",
                     "klassisches italienisches Rezept.",
@@ -125,13 +125,13 @@ public class Recipes extends Fragment {
 
 
             //Rezept 3
-            drawable = getResources().getDrawable(R.drawable.chickencacciatore, getActivity().getTheme());
+            drawable = getResources().getDrawable(R.drawable.huenchen_nudeln, getActivity().getTheme());
             byte[] HühnchnNudeln = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Italienisch", "HühnchnNudeln ", "fabian", today.toString(),
+            databaseHelper.insertRecipe("Italienisch", "HühnchenNudeln ", "fabian", today.toString(),
                     "1.Zwiebeln kleinschneiden und in der Pfanne anbraten.\n" +
                             "2. Wasser aufsetzen und Nudeln 10 Minuten Kochen lassen.\n" +
-                            "4. Hühnchen anbraten und würzen." +
+                            "4. Hühnchen anbraten und würzen.\n" +
                             "5. Tomaten kleinschneiden und pyrieren.\n" +
                             "6. Paprika kleinschneiden und anbraten." +
                             "7. Schwammerl kleinschneiden und anbraten." +
@@ -156,7 +156,7 @@ public class Recipes extends Fragment {
 
 
             //Rezept 4
-            drawable = getResources().getDrawable(R.drawable.abzhorka, getActivity().getTheme());
+            drawable = getResources().getDrawable(R.drawable.chilli_con_carne, getActivity().getTheme());
             byte[] chili = pictureHelper.getByteArrayFromDrawable(drawable);
 
             databaseHelper.insertRecipe("Mexikaisch", "ChiliConCarne", "thomas", today.toString(),
@@ -188,10 +188,10 @@ public class Recipes extends Fragment {
 
 
             //Rezept 5
-            drawable = getResources().getDrawable(R.drawable.beefstroganoff, getActivity().getTheme());
+            drawable = getResources().getDrawable(R.drawable.wokpfanne, getActivity().getTheme());
             byte[] Wokpfanne = pictureHelper.getByteArrayFromDrawable(drawable);
 
-            databaseHelper.insertRecipe("Chinesisch", "Wokpfanne", "shyjoo", today.toString(),
+            databaseHelper.insertRecipe("Chinesisch", "Wokpfanne", "fabian", today.toString(),
                     "1. Zutaten(Paprika,Schwammerl,Zwiebeln, Karotten) alle kleinschneiden .\n" +
                             "2. Wasser aufsetzen und Reis kochen lassen .\n" +
                             "3. Hühnchen würzen und scharf in der Pfanne anbraten.\n" +
@@ -200,7 +200,7 @@ public class Recipes extends Fragment {
                     "Sehr gesund und zum abnehen geeignet.",
                     Wokpfanne, Wokpfanne, 8);
 
-            int WokpfanneId = databaseHelper.GetIdByRecipeName("Beef Stroganoff");
+            int WokpfanneId = databaseHelper.GetIdByRecipeName("Wokpfanne");
             ArrayList<String> WokpfanneIngre = new ArrayList<>();
             WokpfanneIngre.add("Hühnchen");
             WokpfanneIngre.add("Paprika");

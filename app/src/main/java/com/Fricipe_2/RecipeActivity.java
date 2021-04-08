@@ -1,7 +1,6 @@
 package com.Fricipe_2;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +18,7 @@ import java.util.ArrayList;
 public class RecipeActivity extends AppCompatActivity {
     PictureHelper pictureHelper = new PictureHelper();
     RecipeItem recipeItem;
-    MediaPlayer player;
+    //MediaPlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

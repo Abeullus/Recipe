@@ -92,9 +92,6 @@ public class SearchResult extends AppCompatActivity {
         return stringToShow;
     }
 
-    /*
-    Method that research the position id of the matched when you have no duplicates, use to show the list of recipes related to matched ingredients
-     */
 
     public ArrayList<Integer> findPositionIdResearch(int idIngredientMatched) {
         ArrayList<Integer> idResearched = new ArrayList<>();
