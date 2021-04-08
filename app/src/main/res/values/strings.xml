@@ -35,6 +35,7 @@
 
     <!-- Text Home Fragment -->
     <string name="random_recipe">zufälliges Rezept</string>
+    <string name="favorite_Recipe">Lieblingsrezept: </string>
 
 
     <!-- Text Infomration Fragment -->

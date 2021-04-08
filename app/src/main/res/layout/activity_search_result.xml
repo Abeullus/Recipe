@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bold"
         android:text="@string/result"
         android:textSize="20dp"
-        android:fontFamily="@font/bold"
-        android:layout_marginBottom="20dp"
-        android:translationX="50dp"
+        android:translationX="25dp"
         android:translationY="15dp" />
 
     <GridView

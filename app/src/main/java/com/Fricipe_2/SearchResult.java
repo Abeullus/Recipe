@@ -88,9 +88,9 @@ public class SearchResult extends AppCompatActivity {
         for (int i = 0; i < array.size(); i++) {
 
             if (array.get(i) == 1) {
-                stringToShow.add("Matched\n" + array.get(i) + "\ningredient");
+                stringToShow.add("Enthält\n" + array.get(i) + "\nZutat");
             } else {
-                stringToShow.add("Matched\n" + array.get(i) + "\ningredients");
+                stringToShow.add("Enthält\n" + array.get(i) + "\nZutaten");
             }
 
         }
