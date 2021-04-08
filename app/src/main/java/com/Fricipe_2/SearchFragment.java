@@ -288,11 +288,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
 
     }
 
-    /*
-    a function that search witch is the max in an array of int
-    used for retrives the maximum of ingredients matched
-    @param numMatches an array of Int that numbers of the matches
-     */
+
     public int findMax(ArrayList<Integer> numMatches) {
         int maxValue = numMatches.get(0);
 
@@ -304,12 +300,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         return maxValue;
     }
 
-    /*
-   a function that search witch are the positions of the array in case of maxvalues duplicates
-   used for retrives the positions of the maximum an then the id of recipes
-   @param numMatches an array of Int that numbers of the matches
-   return an array of int that shows the positions of the maximum
-    */
+
     public ArrayList<Integer> findPosition(ArrayList<Integer> matches, int maxvalue) {
         ArrayList<Integer> positions = new ArrayList<>();
         for (int i = 0; i < matches.size(); i++) {
@@ -323,9 +314,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         return positions;
     }
 
-    /*
-    this function call the db to find the best recipes and retun an arraylist of integer -> id of best recipes
-     */
+
     public ArrayList<Integer> findBestRecipes() {
         ArrayList<Integer> bestRecipes = new ArrayList<>();
         DatabaseHelper databaseHelper = new DatabaseHelper(getContext(), "Recipes.db", null, 1);
@@ -340,9 +329,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         return bestRecipes;
     }
 
-    /*
-    function that removes the duplicates in an array of Integer
-     */
+
     public ArrayList<Integer> removeDuplicates(ArrayList<Integer> array) {
         ArrayList<Integer> noduplicates = new ArrayList<>();
         Set<Integer> withoutDuplicates = new LinkedHashSet<Integer>(array);

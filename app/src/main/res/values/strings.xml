@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Öffne Menü</string>
     <string name="navigation_drawer_close">Schließe Menü</string>
 
-    <string name="title_activity_recipy">RecipyActivity</string>
+    <string name="title_activity_recipe">RecipyActivity</string>
 
     <string name="title_main_screen">Herzlich Willkommen zu Fricipe</string>
     <string name="text_main_screen">Wähle nun, ob du ein Rezept mit Zutaten aus deinem Kühlschrank erhalten möchtest oder ein beliebiges Rezept.</string>

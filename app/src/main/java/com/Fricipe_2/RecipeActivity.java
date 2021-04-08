@@ -3,6 +3,7 @@ package com.Fricipe_2;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -28,7 +29,9 @@ public class RecipeActivity extends AppCompatActivity {
         //Verbinde mit DB
         final DatabaseHelper databaseHelper = new DatabaseHelper(this, "Recipes.db", null, 1);
 
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
 
         TextView recipeName = findViewById(R.id.txt_recipeName);
         TextView author = findViewById(R.id.txt_recipeAuthor);
@@ -41,7 +44,6 @@ public class RecipeActivity extends AppCompatActivity {
         CheckBox like = findViewById(R.id.chk_recipeLike);
         Intent intent = getIntent();
         String name = intent.getStringExtra("Fricipe_2");
-
 
 
         recipeItem = databaseHelper.recipesSelectByName(name);
@@ -69,7 +71,7 @@ public class RecipeActivity extends AppCompatActivity {
 
         } else {
             Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
-        };
+        }
 
     }
 

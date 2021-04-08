@@ -1,15 +1,11 @@
 package com.Fricipe_2;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,10 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.media.MediaPlayer;
-
 import android.widget.Toast;
-
 
 
 public class MainActivity extends AppCompatActivity
@@ -29,10 +22,6 @@ public class MainActivity extends AppCompatActivity
     DrawerLayout drawer;
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
-
-    private static final String CHANNEL_ID = "simplified_coding";
-    private static final String CHANNEL_NAME = "Simplified Coding";
-    private static final String CHANNEL_DESC = "Simplified Coding Notifications";
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -60,42 +49,10 @@ public class MainActivity extends AppCompatActivity
             }
         };
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-
-            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
-            channel.setDescription(CHANNEL_DESC);
-            NotificationManager manager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel);
-        }
-
-        findViewById(R.id.btn_notify_on).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayNotification();
-            }
-        });
-
-
-
 
         drawer.addDrawerListener(toggle);
 
         toggle.syncState();
-
-    }
-
-
-    private void displayNotification() {
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(this, CHANNEL_ID)
-                        .setSmallIcon(R.drawable.fricipe_logo)
-                        .setContentTitle("Hey! Bringe neuen Schwung in deine Radtour!")
-                        .setContentText("Lass dir jetzt eine individuelle Route von Velotour erzeugen.")
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-
-        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
-
-        mNotificationMgr.notify(1, mBuilder.build());
 
     }
 
@@ -140,13 +97,11 @@ public class MainActivity extends AppCompatActivity
             FavoriteRecipe favoriteRecipe = new FavoriteRecipe();
             manager.beginTransaction().replace(R.id.root_layout, favoriteRecipe, favoriteRecipe.getTag()).addToBackStack(null).commit();
 
-        } else if (id == R.id.nav_category)
-        {
+        } else if (id == R.id.nav_category) {
             CategoryFragment categoryFragment = new CategoryFragment();
             manager.beginTransaction().replace(R.id.root_layout, categoryFragment, categoryFragment.getTag()).addToBackStack(null).commit();
 
-        } else if (id == R.id.nav_information)
-        {
+        } else if (id == R.id.nav_information) {
             InformationFragment informationFragment = new InformationFragment();
             manager.beginTransaction().replace(R.id.root_layout, informationFragment, informationFragment.getTag()).addToBackStack(null).commit();
 
@@ -180,23 +135,20 @@ public class MainActivity extends AppCompatActivity
 
     public void stop(View v) {
         stopPlayer();
-   }
+    }
+
     private void stopPlayer() {
         if (player != null) {
             player.release();
             player = null;
             Toast.makeText(this, "MediaPlayer released", Toast.LENGTH_SHORT).show();
-       }
+        }
     }
+
     @Override
     protected void onStop() {
         super.onStop();
-       stopPlayer();
-    }
-    /*
-        Nicht löschen, gehört irgendwie zum OnClick-Interface!
-         */
-    public void onClick(View v) {
+        stopPlayer();
     }
 
 

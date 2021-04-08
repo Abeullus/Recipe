@@ -67,7 +67,6 @@ public class Recipes extends Fragment {
             }
 
 
-
             //Rezept 1
             drawable = getResources().getDrawable(R.drawable.bulgogi, getActivity().getTheme());
             byte[] Lachsnudeln = pictureHelper.getByteArrayFromDrawable(drawable);
@@ -78,7 +77,7 @@ public class Recipes extends Fragment {
                             "3.Wasser aufsetzen und salzen.\n" +
                             "4. Nachdem das Wasser kocht Nudeln hinzufügen und 10 Minuten kochen lassen.\n" +
                             "5. Nudeln in die Pfanne dazugeben und gut durchmengen.\n" +
-                            "6. Milch dazugeben und aufkochen lassen.\n"+
+                            "6. Milch dazugeben und aufkochen lassen.\n" +
                             "7. Mit Pfeffer und Salz abschmecken", "Studentenessen",
                     Lachsnudeln, Lachsnudeln, 4);
 
@@ -119,7 +118,6 @@ public class Recipes extends Fragment {
             bologneseIngre.add("Tomaten");
             bologneseIngre.add("Knoblauch");
             bologneseIngre.add("Milch");
-            ;
 
             for (int i = 0; i < bologneseIngre.size(); i++) {
                 databaseHelper.insertIngredients(bologneseId, bologneseIngre.get(i));
@@ -151,7 +149,6 @@ public class Recipes extends Fragment {
             HühnchnNudelnIngre.add("Paprika");
             HühnchnNudelnIngre.add("Tomaten");
             HühnchnNudelnIngre.add("Zwiebeln");
-            ;
 
             for (int i = 0; i < HühnchnNudelnIngre.size(); i++) {
                 databaseHelper.insertIngredients(HühnchnNudelnId, HühnchnNudelnIngre.get(i));
@@ -164,12 +161,12 @@ public class Recipes extends Fragment {
 
             databaseHelper.insertRecipe("Mexikaisch", "ChiliConCarne", "thomas", today.toString(),
                     "1. Knobluauch und Zwiebeln in kleine Stücke schneiden und gut anbraten.\n" +
-                            "1. Wasser aufsetzen und Kartoffeln kochen.\n" +
-                            "1.Fleisch nach wahl anbraten.\n" +
-                            "1. Paprika und Tomaten klein würfeln und in die Pfanne dazugeben.\n" +
-                            "1. Mais dazugeben und gut ene Stune köcheln lassen.\n" +
-                            "1. Kartoffeln abseien und klein herschneiden und auch in die Pfanne dazugeben.\n" +
-                            "1. Alles gut mit Salz und Pfeffer würzen.\n" ,
+                            "2. Wasser aufsetzen und Kartoffeln kochen.\n" +
+                            "3. Fleisch nach wahl anbraten.\n" +
+                            "4. Paprika und Tomaten klein würfeln und in die Pfanne dazugeben.\n" +
+                            "5. Mais dazugeben und gut ene Stune köcheln lassen.\n" +
+                            "6. Kartoffeln abseien und klein herschneiden und auch in die Pfanne dazugeben.\n" +
+                            "7. Alles gut mit Salz und Pfeffer würzen.\n",
 
                     "auch am darauffolgnden Tag sehr lecker.",
                     chili, chili, 3);
@@ -195,11 +192,11 @@ public class Recipes extends Fragment {
             byte[] Wokpfanne = pictureHelper.getByteArrayFromDrawable(drawable);
 
             databaseHelper.insertRecipe("Chinesisch", "Wokpfanne", "shyjoo", today.toString(),
-                    "1.Zutaten(Paprika,Schwammerl,Zwiebeln, Karotten) alle kleinschneiden .\n" +
-                            "1.Wasser aufsetzen und Reis kochen lassen .\n" +
-                            "1. Hühnchen würzen und scharf in der Pfanne anbraten.\n" +
-                            "1. Die kleingeschnittenen Zutaten der Reihen nach in die Pfanne dazugeben und anbraten .\n" +
-                            "1. Den Reis noch dazgeben und zehn Minuten köcheln lassen.\n" ,
+                    "1. Zutaten(Paprika,Schwammerl,Zwiebeln, Karotten) alle kleinschneiden .\n" +
+                            "2. Wasser aufsetzen und Reis kochen lassen .\n" +
+                            "3. Hühnchen würzen und scharf in der Pfanne anbraten.\n" +
+                            "4. Die kleingeschnittenen Zutaten der Reihen nach in die Pfanne dazugeben und anbraten .\n" +
+                            "5. Den Reis noch dazgeben und zehn Minuten köcheln lassen.\n",
                     "Sehr gesund und zum abnehen geeignet.",
                     Wokpfanne, Wokpfanne, 8);
 
@@ -214,7 +211,7 @@ public class Recipes extends Fragment {
             WokpfanneIngre.add("Reis");
 
 
-            for (int i = 0; i <WokpfanneIngre.size(); i++) {
+            for (int i = 0; i < WokpfanneIngre.size(); i++) {
                 databaseHelper.insertIngredients(WokpfanneId, WokpfanneIngre.get(i));
             }
         }

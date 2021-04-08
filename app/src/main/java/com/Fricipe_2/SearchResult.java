@@ -8,9 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.Toast;
-
-import com.Fricipe_2.RecipeListActivity;
 
 import java.util.ArrayList;
 
@@ -39,7 +36,7 @@ public class SearchResult extends AppCompatActivity {
         ArrayList<String> receiveMatchesNoDuplicatesString = createString(receiveMatchesNoDuplicates);
 
         gridView = findViewById(R.id.idGridSearchResult);
-        adapter = new ArrayAdapter<String>(this, R.layout.searchresult_custom, receiveMatchesNoDuplicatesString);
+        adapter = new ArrayAdapter<String>(this, R.layout.box_searchresult, receiveMatchesNoDuplicatesString);
         gridView.setAdapter(adapter);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -79,8 +76,6 @@ public class SearchResult extends AppCompatActivity {
         }
         player.start();
     }
-
-
 
 
     public ArrayList<String> createString(ArrayList<Integer> array) {

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.Fricipe_2.Helper.DatabaseHelper;
 import com.Fricipe_2.Model.RecipeItem;
+
 import java.util.ArrayList;
 
 public class RecipeListActivity extends AppCompatActivity {

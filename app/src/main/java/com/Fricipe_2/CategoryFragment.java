@@ -12,7 +12,7 @@ import android.widget.ListView;
 
 import com.Fricipe_2.Helper.DatabaseHelper;
 import com.Fricipe_2.Model.CategoryItem;
-import com.Fricipe_2.RecipeListActivity;
+
 import java.util.ArrayList;
 
 public class CategoryFragment extends Fragment {
