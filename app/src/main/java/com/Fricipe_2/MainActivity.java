@@ -1,6 +1,11 @@
 package com.Fricipe_2;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.NotificationCompat;
@@ -13,9 +18,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.media.MediaPlayer;
+
 import android.widget.Toast;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
+
 
 
 public class MainActivity extends AppCompatActivity
@@ -25,7 +30,12 @@ public class MainActivity extends AppCompatActivity
     ActionBarDrawerToggle toggle;
     NavigationView navigationView;
 
+    private static final String CHANNEL_ID = "simplified_coding";
+    private static final String CHANNEL_NAME = "Simplified Coding";
+    private static final String CHANNEL_DESC = "Simplified Coding Notifications";
 
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,12 +60,45 @@ public class MainActivity extends AppCompatActivity
             }
         };
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription(CHANNEL_DESC);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
+        findViewById(R.id.btn_notify_on).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayNotification();
+            }
+        });
+
+
+
 
         drawer.addDrawerListener(toggle);
 
         toggle.syncState();
 
     }
+
+
+    private void displayNotification() {
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this, CHANNEL_ID)
+                        .setSmallIcon(R.drawable.fricipe_logo)
+                        .setContentTitle("Hey! Bringe neuen Schwung in deine Radtour!")
+                        .setContentText("Lass dir jetzt eine individuelle Route von Velotour erzeugen.")
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        NotificationManagerCompat mNotificationMgr = NotificationManagerCompat.from(this);
+
+        mNotificationMgr.notify(1, mBuilder.build());
+
+    }
+
 
     @Override
     protected void onStart() {
@@ -149,6 +192,11 @@ public class MainActivity extends AppCompatActivity
     protected void onStop() {
         super.onStop();
        stopPlayer();
+    }
+    /*
+        Nicht löschen, gehört irgendwie zum OnClick-Interface!
+         */
+    public void onClick(View v) {
     }
 
 

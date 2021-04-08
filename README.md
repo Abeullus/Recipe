@@ -6,9 +6,11 @@ Unsere Ziele mit dieser App sind anregungen zu schaffen, um selber und einfach z
 Des weieren sind Zeitersparnis und Nachhltigkeit die Hauptziele dieses App. Hier sehen Sie einige Auszüge wie die App aufgebaut ist.
 
 
+___________________________________________________
 
 
 Quellen:
+
 DBHelper:
 https://developer.android.com/reference/android/database/sqlite/SQLiteOpenHelper
 
@@ -20,14 +22,34 @@ https://www.youtube.com/watch?v=QY-O49a_Ags  //search Item
 Aufbau und Funktion einer kompletten App erklärt
 https://www.youtube.com/watch?v=312RhjfetP8 // zu Hilfe gezogen
 
-
-Rzepte erstellen:
+Rezepte erstellen:
 https://www.youtube.com/watch?v=ETgxBNhyYyE
 https://www.youtube.com/watch?v=5skucaAwn18
 
-design nach unseren vorstelungen
-
+Das Design der App wurde mit dem Programm AdobeXD erstellt und anschließend in Android Studio übertragen.
 
 Musik:
+
 https://www.youtube.com/watch?v=rJ3XbXtjNaE
 https://www.youtube.com/watch?v=C_Ka7cKwXW0
+
+
+___________________________________________________
+
+
+Team:
+
+Thomas Hofbauer
+Matr.Nr:2124911
+Email:Thomas1.Hofbauer@stud.uni-regensburg.de
+GitHub:Thomas2705H
+Komponente: Musik
+
+
+Fabian Ziegler
+Matr.Nr: 2082578
+Email:Fabian.Ziegler@stud.uni-regensburg.de
+GitHub:
+Komponente: Benachrichtigung, Layout
+
+Die gesamte App wurde zusammen programmmiert bis auf wenige Komponenten die oben angegeben wurden.

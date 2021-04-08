@@ -77,91 +77,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="134dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="292dp"
+        android:fontFamily="@font/light"
+        android:text="@string/text_1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/button4"
-        android:layout_width="30dp"
+        android:layout_width="35dp"
         android:layout_height="25dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="216dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/medium"
         android:onClick="stop"
         android:text="@string/button_4"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
+        app:layout_constraintHorizontal_bias="0.715"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="25dp"
+        android:layout_width="30dp"
         android:layout_height="25dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="216dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/medium"
         android:onClick="play"
         android:text="@string/button_3"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintHorizontal_bias="0.627"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="OnClick" />
 
     <Button
-        android:id="@+id/btn_notify_off"
-        android:layout_width="30dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="256dp"
-        android:background="@color/colorPrimary"
-        android:fontFamily="@font/medium"
-        android:text="@string/button_6"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="134dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="332dp"
-        android:fontFamily="@font/light"
-        android:text="@string/text_2"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="134dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="300dp"
-        android:fontFamily="@font/light"
-        android:text="@string/text_1"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.375"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints" />
-
-    <Button
         android:id="@+id/btn_notify_on"
-        android:layout_width="25dp"
+        android:layout_width="250dp"
         android:layout_height="25dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="260dp"
         android:background="@color/colorPrimary"
-        android:fontFamily="@font/medium"
+        android:fontFamily="@font/light"
+        android:textSize="12sp"
         android:text="@string/button_5"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
