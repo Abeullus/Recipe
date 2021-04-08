@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.Fricipe_2.FavoriteRecipe">
 
     <LinearLayout
@@ -22,11 +23,10 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
+            android:layout_marginTop="50dp"
             android:scaleType="fitXY"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -34,17 +34,19 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/fricipe_logo" />
 
+
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Favourite Recipes"
+            android:text="@string/favorite_Recipe"
             android:textColor="@color/colorFont1"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:translationX="25dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/GridView_New" />
 

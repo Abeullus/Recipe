@@ -32,6 +32,7 @@ public class Recipes extends Fragment {
     public Recipes() {
     }
 
+    //Rezepte wurden manuel eingepflegt und könnten bei Bedarf mit einer API erweitert werden.
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -54,7 +55,7 @@ public class Recipes extends Fragment {
                     "1. Nudeln \n 2.Eier \n 3. Mehl", "traditionelles deutsches Essen",
                     eiernudeln, eiernudeln, 0);
 
-            int eiernudelnId = databaseHelper.GetIdByRecipeName("eiernudeln");
+            int eiernudelnId = databaseHelper.GetIdByRecipeName("Eiernudeln");
             ArrayList<String> eiernudelnIngre = new ArrayList<>();
             eiernudelnIngre.add("Pasta");
             eiernudelnIngre.add("egg");
@@ -65,7 +66,7 @@ public class Recipes extends Fragment {
                 databaseHelper.insertIngredients(eiernudelnId, eiernudelnIngre.get(i));
             }
 
-            //Rezepte wurden manuel eingepflegt und könnten bei Bedarf mit einer API erweitert werden.
+
 
             //Rezept 1
             drawable = getResources().getDrawable(R.drawable.bulgogi, getActivity().getTheme());
