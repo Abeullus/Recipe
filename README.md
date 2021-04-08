@@ -64,3 +64,8 @@ Die gesamte App wurde zusammen programmmiert bis auf wenige Komponenten die oben
 
 
 
+![Screenshot_!](screenshots/Screenshot_1.png)
+
+Hier hat der Nutzer die Wahl, ein zufälliges Rezept zu wählen, oder seine vorhandenen Zutaten im nächsten Schritt zu wählen.
+
+
