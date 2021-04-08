@@ -195,15 +195,12 @@ public class Recipes extends Fragment {
             byte[] Wokpfanne = pictureHelper.getByteArrayFromDrawable(drawable);
 
             databaseHelper.insertRecipe("Chinesisch", "Wokpfanne", "shyjoo", today.toString(),
-                    "1. .\n" +
-                            "1. .\n" +
-                            "1. .\n" +
-                            "1. .\n" +
-                            "1. .\n" +
-                            "1. .\n" +
-                            "1. .\n" +" " +
-                            ".\n",
-                    "Bhe was stationed in deepest Siberia, his chef discovered that the beef was frozen so solid that it could only be coped with by cutting it into very thin strips.",
+                    "1.Zutaten(Paprika,Schwammerl,Zwiebeln, Karotten) alle kleinschneiden .\n" +
+                            "1.Wasser aufsetzen und Reis kochen lassen .\n" +
+                            "1. Hühnchen würzen und scharf in der Pfanne anbraten.\n" +
+                            "1. Die kleingeschnittenen Zutaten der Reihen nach in die Pfanne dazugeben und anbraten .\n" +
+                            "1. Den Reis noch dazgeben und zehn Minuten köcheln lassen.\n" ,
+                    "Sehr gesund und zum abnehen geeignet.",
                     Wokpfanne, Wokpfanne, 8);
 
             int WokpfanneId = databaseHelper.GetIdByRecipeName("Beef Stroganoff");
@@ -214,9 +211,8 @@ public class Recipes extends Fragment {
             WokpfanneIngre.add("Zwiebeln");
             WokpfanneIngre.add("Mais");
             WokpfanneIngre.add("Karotten");
-            WokpfanneIngre.add("Karotten");
-            WokpfanneIngre.add("Karotten");
-            WokpfanneIngre.add("Karotten");
+            WokpfanneIngre.add("Reis");
+
 
             for (int i = 0; i <WokpfanneIngre.size(); i++) {
                 databaseHelper.insertIngredients(WokpfanneId, WokpfanneIngre.get(i));
